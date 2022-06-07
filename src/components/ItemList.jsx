@@ -2,13 +2,13 @@ import React from 'react'
 import Item from './Item'
 
 function ItemList({productos}) {
-
+console.log(productos)
 
   return (
       <>
-     <div>
+     <div style={{display:"flex", flexWrap:"wrap"}}>
   
-       {productos?.map(producto => <Item Key={producto.id} img={producto.img} nombre={producto.title} color={producto.color} />)}  
+       {productos.map(producto => <Item Key={producto.id} img={producto.img} nombre={producto.title} precio={producto.precio} />)}  
      </div>
   </>
   )
