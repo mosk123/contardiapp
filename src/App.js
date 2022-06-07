@@ -14,7 +14,8 @@ alert(`sumaste ${contador} productos`)
      <NavBar />
      {/* <ItemListContainer greeting={'Hola!!!... Este es mi primer mensaje por props'}/> */}
      <div>
-       <ItemCount stock={10} initial={1} onAdd={onAdd}></ItemCount>
+       <ItemListContainer />
+       {/* <ItemCount stock={10} initial={1} onAdd={onAdd}></ItemCount> */}
      </div>
      </>
   );
