@@ -2,7 +2,7 @@ import React from 'react'
 import ItemList from './ItemList'
 
 
-function ItemListContainer({greeting}) {
+function ItemListContainer({}) {
 
 
 
@@ -34,6 +34,7 @@ function ItemListContainer({greeting}) {
     <>
     {/* <h1 className='text-center'>{greeting}</h1> */}
     <ItemList productos={products}/>
+    
     </>
   );
   }
