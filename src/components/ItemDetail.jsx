@@ -1,8 +1,9 @@
 import React from 'react'
 
 
+
 function ItemDetail({prodDetail}) {
-   const {title, precio, color, img} = prodDetail;
+   const {category, precio, color, img, detalle, id} = prodDetail;
 
 
   return (
@@ -17,10 +18,10 @@ function ItemDetail({prodDetail}) {
                 </div>
                 <div className="col-md-8 col-sm-6 pt-5">
                   <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
+                    <h5 className="card-title">{category}</h5>
                     <p className="card-text fw-light">{color}</p>
                     <p className="card-text fw-light">Precio: ${precio}</p>
-                    <p className="card-text fw-light">Remera de algondon. Calidad Premium. Este producto se encuentra en stock, en talles S - XS - L - XL.</p>
+                    <p className="card-text fw-light">{detalle}</p>
                     <button type="button" className="btn btn-primary">Agregar</button>
                   </div>
                 </div>
