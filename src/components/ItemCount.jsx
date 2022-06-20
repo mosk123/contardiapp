@@ -15,12 +15,6 @@ const resta = () =>{
   contador > 1 ? setContador(contador - 1) : alert("No puedes quuitar mas productos")
 }
 
-const reset = () =>{
-  setContador(initial)
-}
-
-
-
   return (
       <>
     <div className='container-fluid d-flex justify-content-center pt-5'>
@@ -29,7 +23,7 @@ const reset = () =>{
         <button onClick={sumar} className='btn btn-danger px-3'>+</button>
     </div>
     <div className='d-flex justify-content-center pt-2'>
-        <button onClick={()=> {onAdd(contador); reset()}} className='btn btn-info px-5'>Agregar al Carrito</button>
+        <button onClick={()=> {onAdd(contador); }} className='btn btn-info px-5'>Agregar al Carrito</button>
     </div>
     </>
   )

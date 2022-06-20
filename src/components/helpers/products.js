@@ -1,9 +1,10 @@
-[
+const products =[
     {
       "id": 1,
       "title": "Remera",
       "precio": 1200,
       "color": "Gris",
+      "stock": 10,
       "img": "/assets/remera.jpg"
     },
     {
@@ -11,6 +12,7 @@
       "title": "jean",
       "precio": 2300,
       "color": "Celeste",
+      "stock": 10,
       "img": "/assets/jean3.png"
     },
     {
@@ -18,6 +20,7 @@
       "title": "Campera",
       "precio": 4700,
       "color": "Azul",
+      "stock": 10,
       "img": "/assets/campera2.jpg"
     },
     {
@@ -25,6 +28,7 @@
       "title": "Remera",
       "precio": 1200,
       "color": "Naranja",
+      "stock": 10,
       "img": "/assets/remera2.png"
     },
     {
@@ -32,6 +36,7 @@
       "title": "Buzo",
       "precio": 3200,
       "color": "Naranja",
+      "stock": 10,
       "img": "/assets/buzo.jpg"
     },
     {
@@ -39,6 +44,7 @@
       "title": "Campera",
       "precio": 4800,
       "color": "Rojo",
+      "stock": 10,
       "img": "/assets/campera.jpg"
     },
     {
@@ -46,6 +52,7 @@
       "title": "Remera",
       "precio": 1200,
       "color": "Rosa",
+      "stock": 10,
       "img": "/assets/remera3.jpg"
     },
     {
@@ -53,6 +60,8 @@
       "title": "Jean",
       "precio": 2300,
       "color": "Negro",
+      "stock": 10,
       "img": "/assets/jean1.png"
     }
   ]
+  export default products
