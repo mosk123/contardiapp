@@ -4,7 +4,7 @@ const products =[
       "title": "Remera",
       "precio": 1200,
       "color": "Gris",
-      "stock": 10,
+      "stock": 7,
       "img": "/assets/remera.jpg"
     },
     {
@@ -12,7 +12,7 @@ const products =[
       "title": "jean",
       "precio": 2300,
       "color": "Celeste",
-      "stock": 10,
+      "stock": 5,
       "img": "/assets/jean3.png"
     },
     {
@@ -20,7 +20,7 @@ const products =[
       "title": "Campera",
       "precio": 4700,
       "color": "Azul",
-      "stock": 10,
+      "stock": 3,
       "img": "/assets/campera2.jpg"
     },
     {
@@ -36,7 +36,7 @@ const products =[
       "title": "Buzo",
       "precio": 3200,
       "color": "Naranja",
-      "stock": 10,
+      "stock": 4,
       "img": "/assets/buzo.jpg"
     },
     {
@@ -44,7 +44,7 @@ const products =[
       "title": "Campera",
       "precio": 4800,
       "color": "Rojo",
-      "stock": 10,
+      "stock": 5,
       "img": "/assets/campera.jpg"
     },
     {
@@ -60,7 +60,7 @@ const products =[
       "title": "Jean",
       "precio": 2300,
       "color": "Negro",
-      "stock": 10,
+      "stock": 6,
       "img": "/assets/jean1.png"
     }
   ]

@@ -16,7 +16,7 @@ function ItemDetailContainer() {
       setLoading(true)
         const task  = new Promise((resolve, reject) => {
           setTimeout(() =>{
-           resolve(products.find(item => item.id == id))
+           resolve(products.find(item => item.id === Number(id)))
           }, 2000);
         });       
         task.then((resolve) => {

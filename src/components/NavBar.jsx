@@ -25,7 +25,7 @@ function NavBar() {
            </ul>
         </li>
 
-  <li className="nav-link"><Link to={`/contacto`} style={{textDecoration:"none", color:"white"}}><CardWidget item={0}/></Link>
+  <li className="nav-link"><Link to={`/cart`} style={{textDecoration:"none", color:"white"}}><CardWidget/></Link>
   </li>
 </ul>
 </div>

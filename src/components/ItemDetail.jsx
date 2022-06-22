@@ -2,17 +2,19 @@ import React from 'react'
 import ItemCount from './ItemCount';
 import {Link} from 'react-router-dom';
 import {useState} from 'react';
+import { useContext } from 'react';
+import { CartContext } from './CartContext';
 
 
 function ItemDetail({prodDetail}) {
    const {category, precio, color, img, detalle, id, stock} = prodDetail;
    const [unidades, setUnidades] = useState();
-
-   
+   const {isInCart, addItem} = useContext(CartContext)
 
    function onAdd(cantidad) {
-    alert(`agregados al carrito ` +  cantidad)
-    setUnidades(cantidad)
+    alert(`Agregaste al carrito ` +  cantidad)
+    isInCart(prodDetail.id)
+    addItem(prodDetail, cantidad)
    }
   return (
     <>
@@ -31,7 +33,7 @@ function ItemDetail({prodDetail}) {
                     <p className="card-text fw-bold text-center text-white">Codigo: {id}</p>
                     <p className="card-text fw-bold text-center text-white">Precio: ${precio}</p>
                     <p className="card-text fw-bold text-center text-white">Stock: {stock}</p>
-                    <p className="card-text fw-bold text-center text-white">{detalle}</p>
+                    {/* <p className="card-text fw-bold text-center text-white">{detalle}</p> */}
                   </div>
                 </div>
               </div>

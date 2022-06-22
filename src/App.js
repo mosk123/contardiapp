@@ -5,17 +5,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contacto from "./components/Contacto";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
+import MyProvider from "./components/CartContext";
 
 function App() {
-/* const onAdd = (contador)=>{
-alert(`sumaste ${contador} productos`)
-} */
+
 
   return (
     <>
    <BrowserRouter>
-    <NavBar />
-    
+   <MyProvider>
+    <NavBar /> 
     <Routes>
     <Route path="/" element={< ItemListContainer/>} />
     <Route path="/category/:id" element={< ItemListContainer/>} />
@@ -23,10 +22,7 @@ alert(`sumaste ${contador} productos`)
     <Route path="/contacto" element={<Contacto />} />
     <Route path="/cart" element={<Cart />} />
     </Routes> 
-   
-     <div>
-    {/* <ItemCount stock={10} initial={1} onAdd={onAdd}></ItemCount> */}
-     </div>
+     </MyProvider>
      </BrowserRouter>
      </>
   );
