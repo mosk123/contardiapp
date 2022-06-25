@@ -1,4 +1,6 @@
 import React, { useState, } from 'react'
+import {Link} from "react-router-dom";
+
 
 function ItemCount({initial, stock, onAdd}) {
 
@@ -17,13 +19,18 @@ const resta = () =>{
 
   return (
       <>
-    <div className='container-fluid d-flex justify-content-center pt-5'>
-        <button onClick={resta} className='btn btn-success px-3'> - </button>
+      <div className='containButton'>
+    <div className='container-fluid d-flex d-flex justify-content-center pt-5'>
+        <button onClick={resta} className='btn btn-success px-3 btnSuma'> - </button>
         <p className='fs-4 px-3'> {contador} </p>
-        <button onClick={sumar} className='btn btn-danger px-3'>+</button>
+        <button onClick={sumar} className='btn btn-danger px-3 btnResta'>+</button>
     </div>
     <div className='d-flex justify-content-center pt-2'>
-        <button onClick={()=> {onAdd(contador);}} className='btn btn-info px-5'>Agregar al Carrito</button>
+        <button onClick={()=> {onAdd(contador);}} className='btn btn-outline-secondary px-5'>Agregar al Carrito</button>
+    </div>
+    <div className='d-flex justify-content-center pt-2'>
+     <Link to={`/`}><button className='btn btn-outline-secondary px-5'>Continuar comprando</button></Link>
+    </div>  
     </div>
     </>
   )

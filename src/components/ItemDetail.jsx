@@ -7,9 +7,9 @@ import { CartContext } from './CartContext';
 
 
 function ItemDetail({prodDetail}) {
-   const {category, precio, color, img, detalle, id, stock} = prodDetail;
+   const {category, title, precio, color, img, detalle, id, stock} = prodDetail;
    const [unidades, setUnidades] = useState();
-   const {isInCart, addItem} = useContext(CartContext)
+   const {isInCart, addItem,} = useContext(CartContext)
 
    function onAdd(cantidad) {
     alert(`Agregaste al carrito ` +  cantidad)
@@ -26,14 +26,13 @@ function ItemDetail({prodDetail}) {
                 <div className="col-md-4 pt-4 ">
                   <img src={img} className="img-fluid img-detail" />
                 </div>
-                <div className="col-md-8 col-sm-6 pt-5 bg-secondary bg-gradient">
+                <div className="col-md-8 col-sm-6 pt-2 bg-secondary bg-gradient">
                   <div className="card-body">
                     <h5 className="card-title">{category}</h5>
                     <p className="card-text fw-bold text-center text-white">Color: {color}</p>
                     <p className="card-text fw-bold text-center text-white">Codigo: {id}</p>
                     <p className="card-text fw-bold text-center text-white">Precio: ${precio}</p>
                     <p className="card-text fw-bold text-center text-white">Stock: {stock}</p>
-                    {/* <p className="card-text fw-bold text-center text-white">{detalle}</p> */}
                   </div>
                 </div>
               </div>

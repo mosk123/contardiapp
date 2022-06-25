@@ -6,6 +6,7 @@ function Item({category, img, id, precio}) {
 
   return (
       <>
+      <div className='item'>
     <div className="card" style={{width: "17rem", margin: 20}}>
     <img src={img} className="card-img-top mt-3" alt="..." />
     <div className="card-body" style={{display: "flex", flexWrap:"wrap", flexDirection:"column", alignItems:"center"}}>
@@ -13,6 +14,7 @@ function Item({category, img, id, precio}) {
       <p className="card-text fs-5 fw-bold"> Precio : ${precio}</p>
       <Link to={`/item/` + id} className="btn btn-primary"> Ver detalle </Link>
     </div>
+  </div>
   </div>
   </>
   )

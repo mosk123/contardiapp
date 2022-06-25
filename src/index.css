@@ -20,4 +20,49 @@ code {
 .linkNav{
   text-decoration: none;
 }
+.noCompras{
+  display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    height: 32rem;
 
+}
+.contenedorVacio{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btnSuma{
+  height: 40px;
+}
+.btnResta{
+  height: 40px;
+}
+.conteinerFooter{
+  width: 100%;
+}
+.iconFooter{
+  padding: 1rem;
+}
+.iW{
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: rgb(23, 95, 23);
+}
+.containButton{
+  padding-bottom: 3rem;
+}
+.letFooter{
+  padding-top: 1rem;
+  padding-left: 11rem;
+}
+.loader{
+  width: 100%;
+  height: 32rem;
+}
+.item{
+  height: 32rem;
+}

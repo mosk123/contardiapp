@@ -39,7 +39,7 @@ const MyProvider =({children}) => {
   }
   // Metodo Filter - Cart
   const deleteItem = (id) =>{
-    setCart(cart.filter((x) => x.id !== id))
+    return setCart(cart.filter((x) => x.id !== id))
   }
   // Metodo Reduce - CartWidget
   const getItemQty = () =>{
@@ -47,11 +47,35 @@ const MyProvider =({children}) => {
   }
   // Metodo Reduce - Cart
   const getItemPrice = () =>{
-    cart.reduce((acc, i) => acc += i.cantidad * i.precio, 0)
+    return cart.reduce((acc, i) => acc += i.cantidad * i.precio, 0)
   }
   
+ const resta = id => {
+  cart.forEach(i =>{
+    if(i.id === id){
+      i.cantidad === 1 ? i.cantidad = 1 : i.cantidad -= 1;
+    }
+    setCart([...cart])
+  })
+ }
+
+const suma = (id) =>{
+  cart.forEach(i =>{
+    if(i.id === id){
+      i.cantidad += 1;
+      setCart([...cart])
+    }
+  })
+}
+
+/* const updateItemToCart = (id, quantity) => {
+  const newCart = [...cart];
+  const foundIndex = cart.findIndex((cartItem) => cartItem.id === id);
+  newCart[foundIndex].quantity = quantity;
+  setCart(newCart);
+}; */
   
-  return <Provider value={{cart, isInCart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice}}>{children}</Provider>
+  return <Provider value={{cart, isInCart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice, suma, resta}}>{children}</Provider>
    
   
 }
