@@ -1,28 +1,27 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import products from './helpers/products';
+import {doc, getDoc, getFirestore}  from 'firebase/firestore'
 
 
 function ItemDetailContainer() {
     const {id} = useParams();
     const [prodDetail, setProdDetail] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false)
     
   
 
     useEffect(() => {
-      setProdDetail({})
-      setLoading(true)
-        const task  = new Promise((resolve, reject) => {
-          setTimeout(() =>{
-           resolve(products.find(item => item.id === Number(id)))
-          }, 2000);
-        });       
-        task.then((resolve) => {
-          setProdDetail(resolve)
-          setLoading(false)
-        });
+      const dataBase = getFirestore();
+      const productRef = doc(dataBase, 'products', id)
+      getDoc(productRef).then((snapshot)=>{
+       setProdDetail({ ...snapshot.data(), id: snapshot.id})
+      }).catch((error) =>{
+      setError(error)
+    }).finally(() =>{
+      setLoading(false)
+    })
 
     }, [id]);
   

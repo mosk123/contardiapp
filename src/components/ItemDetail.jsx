@@ -28,7 +28,7 @@ function ItemDetail({prodDetail}) {
                 </div>
                 <div className="col-md-8 col-sm-6 pt-2 bg-secondary bg-gradient">
                   <div className="card-body">
-                    <h5 className="card-title">{category}</h5>
+                    <h5 className="card-title fw-bold text-center text-white">{category}</h5>
                     <p className="card-text fw-bold text-center text-white">Color: {color}</p>
                     <p className="card-text fw-bold text-center text-white">Codigo: {id}</p>
                     <p className="card-text fw-bold text-center text-white">Precio: ${precio}</p>

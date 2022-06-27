@@ -6,7 +6,7 @@ function ItemList({productos}) {
 
   return (
       <>
-     <div style={{display:"flex", flexWrap:"wrap"}}>
+     <div className='conCat'  style={{display:"flex", flexWrap:"wrap"}}>
   
        {productos.map(producto => <Item id={producto.id} img={producto.img} nombre={producto.title} precio={producto.precio} categoy={producto.category} />)}  
      </div>

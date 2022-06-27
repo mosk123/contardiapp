@@ -31,11 +31,11 @@ function Cart() {
 <tbody>
           {cart.map(prodDetail => (
             <tr key={prodDetail.id}>
-      <th scope="row"><img src={prodDetail.img} alt="" style={{width:"70px"}} /></th>
-      <td className='pt-4'>{prodDetail.title}</td>
-      <td className='pt-4'>{prodDetail.cantidad}</td>
-      <td className='pt-4'> $ {prodDetail.precio * prodDetail.cantidad}</td>
-            <td className='pt-4'><button class="btn btn-success btn-sm" onClick={() => resta (prodDetail.id)}>
+      <th className="pt-5" scope="row"><img src={prodDetail.img} alt="" style={{width:"70px"}} /></th>
+      <td className='pt-5'>{prodDetail.title}</td>
+      <td className='pt-5'>{prodDetail.cantidad}</td>
+      <td className='pt-5'> $ {prodDetail.precio * prodDetail.cantidad}</td>
+            <td className='pt-5'><button class="btn btn-success btn-sm" onClick={() => resta (prodDetail.id)}>
                   -
               </button>
               <button class="btn btn-danger btn-sm" onClick={() => suma (prodDetail.id)}>

@@ -52,28 +52,26 @@ const MyProvider =({children}) => {
   
  const resta = id => {
   cart.forEach(i =>{
-    if(i.id === id){
-      i.cantidad === 1 ? i.cantidad = 1 : i.cantidad -= 1;
-    }
-    setCart([...cart])
+    if(i.id === id && i.cantidad > 1){
+      i.cantidad -= 1;
+      setCart([...cart])}
+    else{
+    alert("No se puede quitar. Utilice el boton Eliminar")
+  }
   })
  }
 
 const suma = (id) =>{
   cart.forEach(i =>{
-    if(i.id === id){
+    if(i.id === id && i.cantidad < i.stock){
       i.cantidad += 1;
       setCart([...cart])
-    }
+    }else{
+    alert("Stock agotado")
+  }
   })
 }
 
-/* const updateItemToCart = (id, quantity) => {
-  const newCart = [...cart];
-  const foundIndex = cart.findIndex((cartItem) => cartItem.id === id);
-  newCart[foundIndex].quantity = quantity;
-  setCart(newCart);
-}; */
   
   return <Provider value={{cart, isInCart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice, suma, resta}}>{children}</Provider>
    
