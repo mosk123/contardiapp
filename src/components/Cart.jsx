@@ -17,7 +17,7 @@ function Cart() {
 
       {getItemQty() > 0 ?
 
-<table class="table item">
+<table class="table table-sm item">
 <thead>
   <tr>
     <th scope="col">#</th>
@@ -30,6 +30,7 @@ function Cart() {
 </thead>
 <tbody>
           {cart.map(prodDetail => (
+            
             <tr key={prodDetail.id}>
       <th className="pt-5" scope="row"><img src={prodDetail.img} alt="" style={{width:"70px"}} /></th>
       <td className='pt-5'>{prodDetail.title}</td>
@@ -42,11 +43,11 @@ function Cart() {
                   +
               </button>
             </td>
-            <td className='pt-4'><button className='btn btn-light fw-bold' onClick={()=>{deleteItem (prodDetail.id)}}>X</button></td>
+            <td className='pt-3'><button className='btn btn-light fw-bold' onClick={()=>{deleteItem (prodDetail.id)}}>X</button></td>
             </tr>
           
           ))}
-          <tr>
+          <tr className='contDetailProd'>
                <th scope="row">
                <td colSpan="2">Total</td>
                <td></td>
@@ -54,7 +55,7 @@ function Cart() {
                <td></td>
                <td></td>
                <th>$ {getItemPrice()}</th>
-               <td><button className="btn btn-danger btn-sm">Comprar</button></td>
+               <td><Link to={`/checkout`}><button className="btn btn-danger btn-sm">Comprar</button></Link></td>
                <td><button className="btn btn-danger btn-sm" onClick={emptyCart}>Vaciar Carrito</button></td>  
                </tr>
           </tbody>
@@ -63,9 +64,9 @@ function Cart() {
         : 
         <div className='noCompras'>
          <div className='contenedorVacio'>
-         <h3 className='pb-4'>Carrito de compras vacio</h3>
+         <h3 className='pb-4 text-white'>Carrito de compras vacio</h3>
         <div className=' pt-2'>
-        <Link to={`/`}><button className='btn btn-outline-secondary px-5'>Ir a la tienda</button></Link>
+        <Link to={`/`}><button className='btn btn-outline-light px-5'>Ir a la tienda</button></Link>
       </div>  
       </div>
       </div>

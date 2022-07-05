@@ -26,10 +26,10 @@ const resta = () =>{
         <button onClick={sumar} className='btn btn-danger px-3 btnResta'>+</button>
     </div>
     <div className='d-flex justify-content-center pt-2'>
-        <button onClick={()=> {onAdd(contador);}} className='btn btn-outline-secondary px-5'>Agregar al Carrito</button>
+        <button onClick={()=> {onAdd(contador);}} className='btn btn-outline-light px-5'>Agregar al Carrito</button>
     </div>
     <div className='d-flex justify-content-center pt-2'>
-     <Link to={`/`}><button className='btn btn-outline-secondary px-5'>Continuar comprando</button></Link>
+     <Link to={`/`}><button className='btn btn-outline-light px-5'>Continuar comprando</button></Link>
     </div>  
     </div>
     </>

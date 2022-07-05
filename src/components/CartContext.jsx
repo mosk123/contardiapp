@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createContext } from "react";
+import { createContext, useEffect } from "react";
 
 export const CartContext = createContext()
 
@@ -8,7 +8,9 @@ const {Provider} = CartContext
 
 const MyProvider =({children}) => {
   
-  const [ cart, setCart] = useState([])
+  const [ cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) ? JSON.parse(localStorage.getItem("cart")) : [])
+
+
 
   // Metodo Some - ItemDetail
   const isInCart = (id) =>{
@@ -52,25 +54,32 @@ const MyProvider =({children}) => {
   
  const resta = id => {
   cart.forEach(i =>{
-    if(i.id === id && i.cantidad > 1){
+    if(i.id === id){
+      if (i.cantidad > 1){
       i.cantidad -= 1;
       setCart([...cart])}
-    else{
+    else if (i.cantidad === 1){
     alert("No se puede quitar. Utilice el boton Eliminar")
+  }
   }
   })
  }
 
 const suma = (id) =>{
   cart.forEach(i =>{
-    if(i.id === id && i.cantidad < i.stock){
+    if(i.id === id){
+      if (i.cantidad < i.stock){
       i.cantidad += 1;
       setCart([...cart])
-    }else{
+    }else if(i.cantidad >= i.stock){
     alert("Stock agotado")
+  }
   }
   })
 }
+useEffect(() => {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}, [cart]);
 
   
   return <Provider value={{cart, isInCart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice, suma, resta}}>{children}</Provider>

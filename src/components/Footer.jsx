@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <>
-    <div className='container-fluid bg-secondary conteinerFooter d-flex justify-content-between align-items-center'>
-     <div className='bg-secondary iconFooter'>
+    <div className='container-fluid bg-s containerFooter d-flex justify-content-between align-items-center'>
+     <div className='iconFooter'>
      <li className='listaNav'><Link to={`/`}><img src={logo} alt="logo" width="50" height="44" /></Link></li>
      </div>
        <div>
