@@ -35,7 +35,7 @@ function ItemDetail({prodDetail}) {
               </div>
             
  
-      <div className="d-grid gap-2 col-3 mx-auto">
+      <div className="d-grid gap-2 col-12 ">
       {unidades > 0 ? 
       <Link to={'/cart'} className="btn btn-dark d-flex justify-content-center">Ir a Carrito</Link>
       :<ItemCount stock={stock} initial={1} onAdd={onAdd}/>}

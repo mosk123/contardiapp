@@ -1,5 +1,28 @@
 # Getting Started with Create React App
 
+## About the proyect
+https://vimeo.com/729438132/9f01174efd
+
+This project was made as a final delivery challenge for CoderHouse. In it, the following dependencies were used:
+### `Bootstrap`
+Bootstrap by CDN to style it // https://getbootstrap.com/
+#### Install npm install bootstrap@5.2.0-beta1
+
+### `React router dom`
+React Router Dom to communicate the logic of the CartContext with other sections, and share functions. https://reactrouter.com/
+#### Install npx create-react-app
+
+### `React Hook Form`
+React Hook Form was used to create a form with data validation, and error handling. https://react-hook-form.com/
+#### Install npm install react-hook-form
+
+### `React Hot Toast`
+React Hot Toast used for button confirmation messages and/or alerts. https://react-hot-toast.com/
+#### Install npm install react-hot-toast
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

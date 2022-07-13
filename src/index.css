@@ -299,6 +299,10 @@ input[type="submit"] {
     flex-wrap: nowrap;
   }
   .parrafoUno{
-   display: flex;
+   display: none;
   }
+  .parrafoDos{
+  padding-left: 3rem;
+  }
+ 
 }
