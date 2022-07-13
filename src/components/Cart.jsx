@@ -16,8 +16,8 @@ function Cart() {
 
 
       {getItemQty() > 0 ?
-
-<table class="table table-sm item">
+<div className='itemCart'>
+<table class="table table-sm">
 <thead>
   <tr>
     <th scope="col">#</th>
@@ -60,13 +60,14 @@ function Cart() {
                </tr>
           </tbody>
           </table>
+          </div>
 
         : 
         <div className='noCompras'>
          <div className='contenedorVacio'>
-         <h3 className='pb-4 text-white'>Carrito de compras vacio</h3>
+         <h3 className='pb-4 text-dark'>Carrito de compras vacio</h3>
         <div className=' pt-2'>
-        <Link to={`/`}><button className='btn btn-outline-light px-5'>Ir a la tienda</button></Link>
+        <Link to={`/`}><button className='btn btn-outline-dark px-5'>Ir a la tienda</button></Link>
       </div>  
       </div>
       </div>

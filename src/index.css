@@ -1,5 +1,5 @@
 body {
- background-color:cadetblue;
+ background-color:white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -12,8 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* NAV*/
 .newNav{
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid black;
+  background-color: #f13b3b;
 }
 
 .listaNav{
@@ -24,6 +27,8 @@ code {
 .linkNav{
   text-decoration: none;
 }
+
+/* CONTENIDO*/
 .noCompras{
   display: flex;
     flex-direction: column;
@@ -42,7 +47,12 @@ code {
 
 }
 .colorCard{
-  background-color: cadetblue;
+  
+  border: none;
+  padding: 1rem;
+}
+.contain{
+  padding-top: 3rem;
 }
 .imgDetalle{
   width: 400px;
@@ -61,48 +71,30 @@ code {
 .btnResta{
   height: 40px;
 }
-.conteinerFooter{
-  width: 100%;
-}
-.iconFooter{
-  padding: 1rem;
-}
-.iW{
-  font-size: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  color: rgb(23, 95, 23);
-}
-.containButton{
-  padding-bottom: 3rem;
-}
-.letFooter{
-  padding-top: 1rem;
-  padding-left: 11rem;
-}
+
+
 .loader{
   width: 100%;
   min-height: 80vh;
+  padding-top: 15rem;
 }
 .item{
+  padding: 2rem;
+  margin: 1rem;
+}
+.itemCart{
   min-height: 80vh;
-  padding-top: 3rem;
 }
-/* .contTable{
-  width: 50%;
-  height: auto;
-  padding-left: 30rem;
+
+.txtCrd{
+padding: 0.2;
+display: flex;
+justify-content: space-around;
+
 }
-.contCount{
-  height: 5rem;
-  
-} */
-/* .contDetailProd{
-  width: 75%;
-  height: 15rem;
-} */
 .containerFooter{
- border-top: 1px solid whitesmoke;
+ border-top: 1px solid black;
+ background-color: #f13b3b;
 }
 /* Formulario*/
 
@@ -112,7 +104,7 @@ code {
 }
 
 .fbody {
-  background: #0e101c;
+  background: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -127,7 +119,7 @@ form {
 }
 h1 {
   font-weight: 100;
-  color: white;
+  color: black;
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(79, 98, 148);
@@ -138,22 +130,18 @@ h1 {
   max-width: 400px;
   margin: 0 auto;
 }
-
-/* p {
-  color: #bf1650;
+.err{
+  color: black;
+  height: 60px;
 }
 
-p::before {
-  display: inline;
-  content: "⚠ ";
-} */
 
 input {
   display: block;
   box-sizing: border-box;
   width: 100%;
   border-radius: 4px;
-  border: 1px solid white;
+  border: 1px solid black;
   padding: 10px 15px;
   margin-bottom: 10px;
   font-size: 14px;
@@ -165,14 +153,14 @@ label {
   display: block;
   margin-bottom: 9px;
   margin-top: 10px;
-  color: white;
+  color: black;
   font-size: 14px;
   font-weight: 200;
 }
 
 input[type="submit"] {
-  background: hsl(357, 71%, 56%);
-  color: white;
+  background: hsl(0, 0%, 50%);
+  color: black;
   text-transform: uppercase;
   border: none;
   margin-top: 40px;
@@ -183,7 +171,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: #c91616;
+  background: #ececec;
 }
 
 input[type="button"]:active,
@@ -207,7 +195,26 @@ input[type="submit"] {
   -webkit-appearance: none;
 }
 
-
+/*FOOTER*/
+.conteinerFooter{
+  width: 100%;
+}
+.iconFooter{
+  padding: 1rem;
+}
+.iW{
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: whitesmoke
+}
+.containButton{
+  padding-bottom: 3rem;
+}
+.letFooter{
+  padding-top: 1rem;
+  padding-left: 11rem;
+}
 
 
 
@@ -216,16 +223,23 @@ input[type="submit"] {
 
 @media screen and (min-width: 1441px){
   .item{
-    height: auto;
-    
+    height: 23rem; 
+  }
+  .itemCart{
+    min-height: 86vh;
+  }
+  .contain{
+    display: flex;
+    justify-content: center;
+    min-height: 57vh;
   }
 
   .conCat{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 10rem;
-    
+    padding-top: 5rem;
+    min-height: 86vh;
   }
 
   .noCompras{
@@ -234,27 +248,57 @@ input[type="submit"] {
       align-content: space-around;
       align-items: center;
       height: 50.3rem;
-  
+  }
+  .buyedProd{
+    min-height: 86vh;
   }
 
   .loader{
     width: 100%;
-    height: 50.3rem;
+    min-height: 86vh;
   }
 
-  .conCat{
-    height: 50rem;
-  }
+  
   .containButton{
-    padding-bottom: 10.5rem;
+    padding-bottom: 5rem;
   }
   .cardBody{
-    padding-top: 5rem;
+    padding-top: 2rem;
     padding-left: 3.4rem;
     padding-right: 3.4rem;
-    border: 1px solid white;
+    border: none;
     width: 30%;
     height: 23.5rem;
   }
+  .fbody{
+    min-height: 86vh;
+  }
 }
   
+@media screen and (min-width: 769px){
+  .contain{
+ display: flex;
+ justify-content: center;
+
+  }
+ .cardDet{
+  display: flex;
+  flex-wrap: nowrap;
+ } 
+ .cardBody{
+  padding-left: 2rem;
+ }
+}
+@media screen and ( max-width: 768px ){ 
+  body {
+    margin:0;
+    padding:0;
+  }
+  .containerFooter{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .parrafoUno{
+   display: flex;
+  }
+}

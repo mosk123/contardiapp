@@ -29,7 +29,7 @@ export const NavNew = () => {
               </Link>
             </li>
             <li className="nav-item dropdown">
-    <a className="nav-link dropdown-toggle fw-bold" style={{textDecoration:"none", color:"white"}} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a className="nav-link dropdown-toggle fw-bold text-dark" style={{textDecoration:"none", color:"dark"}} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Categorias</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><Link to={`./category/Remera`} className="dropdown-item fw-bold">Remeras</Link></li>
@@ -38,7 +38,7 @@ export const NavNew = () => {
             <li><Link to={`./category/Buzo`} className="dropdown-item fw-bold">Buzos</Link></li>
           </ul>
         </li>
-        <li className="nav-link"><Link to={`/cart`} style={{textDecoration:"none", color:"white"}}><CardWidget/></Link></li>
+        <li className="nav-link"><Link to={`/cart`} style={{textDecoration:"none", color:"dark"}}><CardWidget/></Link></li>
           </ul>
         </div>
       </div>

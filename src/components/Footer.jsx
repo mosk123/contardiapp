@@ -9,11 +9,11 @@ function Footer() {
      <div className='iconFooter'>
      <li className='listaNav'><Link to={`/`}><img src={logo} alt="logo" width="50" height="44" /></Link></li>
      </div>
-       <div>
-       <p className='lh-1 text-white fw-light letFooter'>App creada unicamente como presentacion final</p>
+       <div className='container-fluid parrafoUno'>
+       <p className='lh-1 text-white fw-semibold letFooter'>Presentacion para desafio final</p>
        </div>
-       <div>
-       <p className='lh-1 text-white fw-light'> Tenes problemas con la compra <i class="bi bi-whatsapp iW"></i></p>
+       <div className='container-fluid parrafoDos'>
+       <p className='lh-1 text-white fw-semibold'> Tenes problemas con la compra<i class="bi bi-whatsapp iW"><Link to={`/external-link`}/></i></p>
       </div>
         </div>
     </>

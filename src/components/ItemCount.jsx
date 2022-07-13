@@ -1,10 +1,13 @@
 import React, { useState, } from 'react'
 import {Link} from "react-router-dom";
+import { Toaster, toast } from 'react-hot-toast';
 
 
 function ItemCount({initial, stock, onAdd}) {
 
 const [contador, setContador] = useState(initial)
+
+
 
 const sumar = () =>{
   if (contador < stock) {
@@ -26,13 +29,22 @@ const resta = () =>{
         <button onClick={sumar} className='btn btn-danger px-3 btnResta'>+</button>
     </div>
     <div className='d-flex justify-content-center pt-2'>
-        <button onClick={()=> {onAdd(contador);}} className='btn btn-outline-light px-5'>Agregar al Carrito</button>
+        <button onClick={()=> {onAdd(contador); toast("Usted ha agregado productos a su carrito");}} className='btn btn-outline-dark px-5'>Agregar al Carrito</button>
+        <Toaster toastOptions={{
+          icon: '👏',
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        }}/>
     </div>
     <div className='d-flex justify-content-center pt-2'>
-     <Link to={`/`}><button className='btn btn-outline-light px-5'>Continuar comprando</button></Link>
+     <Link to={`/`}><button className='btn btn-outline-dark px-5'>Continuar comprando</button></Link>
     </div>  
     </div>
     </>
+    
   )
 }
 

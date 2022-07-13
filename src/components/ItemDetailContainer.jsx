@@ -4,6 +4,7 @@ import ItemDetail from './ItemDetail';
 import {doc, getDoc, getFirestore}  from 'firebase/firestore'
 
 
+
 function ItemDetailContainer() {
     const {id} = useParams();
     const [prodDetail, setProdDetail] = useState([]);
@@ -28,7 +29,7 @@ function ItemDetailContainer() {
 
   return (
     <>
-    { loading ? <div className="loader">Loading...</div> : <ItemDetail prodDetail={prodDetail}/>} 
+    { loading ? <div className='loader text-center'><div className='spinner-border text-danger' role="status"><span class="visually-hidden">Loading...</span></div></div> : <ItemDetail prodDetail={prodDetail}/>} 
     </>
     
   )
